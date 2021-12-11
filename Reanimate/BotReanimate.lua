@@ -75,6 +75,7 @@ local Collision
 function NoCollisions()
    Character.Humanoid.Died:Connect(function()
    _G.Reanimated = false
+   _G.ScriptRunning = false
    workspace:FindFirstChild("Camera").FieldOfView = 70
    	Netlessing:Disconnect()
    _G.BotReanim = false
