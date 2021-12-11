@@ -95,24 +95,15 @@ end)
 --// Netless
 function Netless()
 for i,v in next, workspace[game.Players.LocalPlayer.Name]:GetChildren() do
-	if v:IsA("BasePart") then 
-		game:GetService("RunService").Heartbeat:connect(function()
-			if Character:FindFirstChild("Dummy") then
+		if v:IsA("BasePart") then 
 			v.Velocity = Vector3.new(0,-32.5,0)
-		end
-		end)
-	elseif v:IsA("Accessory") then 
-		
-		game:GetService("RunService").Heartbeat:connect(function()
-			if Character:FindFirstChild("Dummy") then
+		elseif v:IsA("Accessory") then 
 			v.Handle.Velocity = Vector3.new(0,-32.5,0)
 		end
-		end)
 	end
 end
-end
 
-Netlessing = RunService.Stepped:Connect(Netless)
+Netlessing = game:GetService("RunService").Heartbeat:Connect(Netless)
 
 Character.HumanoidRootPart:Destroy()
 workspace.Camera.CameraSubject = ClonedCharacter.Humanoid
