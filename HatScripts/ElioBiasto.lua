@@ -137,7 +137,7 @@ wait(0.2)
 --bp.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
     bp.Position = game.Players.LocalPlayer:GetMouse().Hit.p     
     local bt = Instance.new("BodyThrust",HatName)
-    bt.Force = Vector3.new(3000,3000,3000)
+    bt.Force = Vector3.new(4000,4000,4000)
     bt.Location = Vector3.new(10,5,-10)
     local hatpos = game.Players.LocalPlayer:GetMouse().Hit.p
     --HatName.Handle.CFrame = CFrame.new(hatpos)
