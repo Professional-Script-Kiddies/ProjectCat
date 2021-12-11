@@ -89,6 +89,7 @@ workspace[game.Players.LocalPlayer.Name].Humanoid.Died:Connect(function()
 	game.Players.LocalPlayer.Character = Character
 	ClonedCharacter:Remove()
 	Character:BreakJoints()
+		   _G.ScriptRunning = false
 	
 end)
 
