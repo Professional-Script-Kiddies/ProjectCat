@@ -24,6 +24,9 @@
     local reanimhat = game.Players.LocalPlayer.Character
     RJ = reanim.HumanoidRootPart.RootJoint
     reanim.Animate:Destroy()
+reanim.Humanoid.Animator:Destroy()
+    reanimhat.Animate:Destroy()
+reanimhat.Humanoid.Animator:Destroy()
     RS = reanim.Torso['Right Shoulder']
     LS = reanim.Torso['Left Shoulder']
     RH = reanim.Torso['Right Hip']
