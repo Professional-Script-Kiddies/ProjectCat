@@ -13,7 +13,7 @@ if not _G.ScriptRunning then _G.ScriptRunning = false end
 
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GelatekWasTaken/UILibraries/main/RobloxScripts.lua"))()
-local Main = Library.new("Project: Cat 1.2.01b - By Gelatek")
+local Main = Library.new("Project: Cat 1.2.1 - By Gelatek")
 
 local MainSection = Main:NewSection("Home")
 local ReanimateSection = Main:NewSection("Reanimations")
