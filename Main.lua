@@ -13,7 +13,7 @@ if not _G.ScriptRunning then _G.ScriptRunning = false end
 
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GelatekWasTaken/UILibraries/main/RobloxScripts.lua"))()
-local Main = Library.new("Project: Cat 1.2 - By Gelatek")
+local Main = Library.new("Project: Cat 1.2.01b - By Gelatek")
 
 local MainSection = Main:NewSection("Home")
 local ReanimateSection = Main:NewSection("Reanimations")
@@ -44,6 +44,11 @@ ReanimateSection:NewButton("Bot Reanimate", function()
 		Message("Project Cat: Already Reanimated!")
 	end
 end)
+
+ReanimateSection:NewButton("Copy Bot hats (stop crying)", function()
+    scb("62724852,62234425,48474294,451220849,63690008,48474313,617605556")
+end)
+
 
 FSSection:NewButton("Sonic", function()
 	if _G.ScriptRunning ~= true then
@@ -166,7 +171,7 @@ HSSection:NewButton("Yellow Lightning Blade", function()
 	end
 end)
 
-HSSection:NewButton("Dual Ultima", function()
+HSSection:NewButton("(BUGGY) Dual Ultima", function()
 	if _G.ScriptRunning ~= true then
 		ShortLoadstring("https://raw.githubusercontent.com/Gelatek/ProjectCat/main/HatScripts/DualUltima.lua")
         _G.ScriptRunning = true
@@ -202,7 +207,7 @@ HSSection:NewButton("Shotgun", function()
 	end
 end)
 
-HSSection:NewButton("Zenith Rifle", function()
+HSSection:NewButton("(BUGGY) Zenith Rifle", function()
 	if _G.ScriptRunning ~= true then
 		ShortLoadstring("https://raw.githubusercontent.com/Gelatek/ProjectCat/main/HatScripts/ZenithRifle.lua")
         _G.ScriptRunning = true
@@ -220,7 +225,7 @@ HSSection:NewButton("Star Glitcher", function()
 	end
 end)
 
-HSSection:NewButton("Hoverboard", function()
+HSSection:NewButton("(BUGGY) Hoverboard", function()
 	if _G.ScriptRunning ~= true then
 		ShortLoadstring("https://raw.githubusercontent.com/Gelatek/ProjectCat/main/HatScripts/Hoverboard.lua")
         _G.ScriptRunning = true
@@ -233,6 +238,8 @@ end)
 function scb(t)
 setclipboard(t)
 end
+
+
 HatsSection:NewButton("Copy Ban Hammer Hats", function()
 scb("4739580137")
 end)
@@ -284,3 +291,4 @@ end)
 HatsSection:NewButton("Copy Zenith Rifle Hats", function()
     scb("6497604093")
 end)
+
