@@ -66,10 +66,6 @@ function AlignObject(Part0,Part1,Position,Rotate)
 	AlignOrientation.Responsiveness = 300
 	Attachment1.Position = Position or Vector3.new(0,0,0)
 	Attachment1.Orientation = Rotate or Vector3.new(0,0,0)
-	if _G.DecreaseJitter == true then
-		local a = Instance.new("BodyForce", Part0)
-		a.Force = Vector3.new(80,80,80)
-	end
 end
 
 Character = game.Players.LocalPlayer.Character
@@ -95,19 +91,26 @@ ReanimateCharacter.Head.face.Transparency = 1
 ReanimateCharacter.Animate.Disabled = true
 Character.Animate.Disabled = true
 ReanimateCharacter.Humanoid.DisplayDistanceType = "None"
-local Collision
-function NoCollisions()
-    if _G.Reanimated == false then
-        Collision:Disconnect()
-        return
-    end
-    for i, v in pairs(Character:GetChildren()) do
-        if v:IsA("BasePart") then
-            v.CanCollide = false
-        end
-    end
+local Collider
+function Noclip()
+	Character.Humanoid.Died:Connect(function()
+		Collider:Disconnect()
+		return
+	end)
+	
+	for i, v in pairs(ReanimateCharacter:GetDescendants()) do
+		if v:IsA("BasePart") then
+			v.CanCollide = false
+		end
+	end
+	
+	for i, v in pairs(Character:GetDescendants()) do
+		if v:IsA("BasePart") then
+			v.CanCollide = false
+		end
+	end
 end
-Collision = game:GetService("RunService").Stepped:Connect(NoCollisions)
+Collider = game:GetService("RunService").Stepped:Connect(Noclip)
 --[[
 game:GetService("RunService").Heartbeat:Connect(function()
 	if Character.Humanoid.Health ~= 0 then
@@ -175,8 +178,8 @@ workspace.Camera.CameraSubject = Humanoid
 end)
 
 
+end)
 
-		end)
 FSSection:NewButton("Sonic", function()
 	if _G.ScriptRunning ~= true then
 		ShortLoadstring("https://raw.githubusercontent.com/Gelatek/ProjectCat/main/FreeScripts/Sonic.lua")
