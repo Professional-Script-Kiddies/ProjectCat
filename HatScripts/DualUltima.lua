@@ -156,10 +156,10 @@ game:GetService("RunService").Heartbeat:connect(function(s, p)
 end)
 function swait(num)
   if num == 0 or num == nil then
-    ArtificialHB.Event:wait(0)
+    game:service'RunService'.Heartbeat:wait(0)
   else
     for i = 0, num do
-      ArtificialHB.Event:wait(0)
+      game:service'RunService'.Heartbeat:wait(0)
     end
   end
 end
