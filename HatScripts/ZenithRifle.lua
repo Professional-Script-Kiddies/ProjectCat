@@ -136,10 +136,10 @@ end
 end)
 function swait(num)
 if num == 0 or num == nil then
-ArtificialHB.Event:wait()
+wait()
 else
 for i = 0, num do
-ArtificialHB.Event:wait()
+wait()
 end
 end
 end
