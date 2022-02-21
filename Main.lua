@@ -15,7 +15,7 @@ if not _G.ScriptRunning then _G.ScriptRunning = false end
 
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GelatekWasTaken/UILibraries/main/RobloxScripts.lua"))()
-local Main = Library.new("Project: Cat 1.2.1a (Last) - By Gelatek")
+local Main = Library.new("Project: Cat 1.2.1b - By Gelatek")
 
 local MainSection = Main:NewSection("Home")
 local ReanimateSection = Main:NewSection("Reanimations")
@@ -303,7 +303,7 @@ HSSection:NewButton("Yellow Lightning Blade", function()
 	end
 end)
 
-HSSection:NewButton("(BUGGY) Dual Ultima", function()
+HSSection:NewButton("Dual Ultima", function()
 	if _G.ScriptRunning ~= true then
 		ShortLoadstring("https://raw.githubusercontent.com/Gelatek/ProjectCat/main/HatScripts/DualUltima.lua")
         _G.ScriptRunning = true
@@ -339,7 +339,7 @@ HSSection:NewButton("Shotgun", function()
 	end
 end)
 
-HSSection:NewButton("(BUGGY) Zenith Rifle", function()
+HSSection:NewButton("Zenith Rifle", function()
 	if _G.ScriptRunning ~= true then
 		ShortLoadstring("https://raw.githubusercontent.com/Gelatek/ProjectCat/main/HatScripts/ZenithRifle.lua")
         _G.ScriptRunning = true
